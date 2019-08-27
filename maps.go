@@ -9,10 +9,7 @@ import (
 func WordCount(s string) map[string]int {
 	m := map[string]int{}
 	for _, w := range strings.Fields(s) {
-		_, exist := m[w]
-		if !exist {
-			m[w] = 0
-		}
+		// default value is 0 in golang
 		m[w]++
 	}
 
